@@ -103,6 +103,25 @@ export const ASSETS = {
     contactHeroBg: "/illustrations/phase-2/contact-hero-background.png",
   },
   /**
+   * Process Step Illustrations — Stored in public/illustrations/process/
+   */
+  process: {
+    requirement: "/illustrations/process/01-requirement.png",
+    requirementAlt: "Requirement gathering, scope review and base paper verification",
+    planning: "/illustrations/process/02-planning.png",
+    planningAlt: "Methodology planning, toolchain selection and timeline mapping",
+    development: "/illustrations/process/03-development.png",
+    developmentAlt: "Core algorithm, simulation and hardware development",
+    testing: "/illustrations/process/04-testing.png",
+    testingAlt: "Benchmark testing, validation and error analysis",
+    documentation: "/illustrations/process/05-documentation.png",
+    documentationAlt: "Chapter-wise documentation, report writing and schematics",
+    review: "/illustrations/process/06-review.png",
+    reviewAlt: "Code review, walkthrough and advisor revisions",
+    delivery: "/illustrations/process/07-delivery.png",
+    deliveryAlt: "Complete handover, setup guide and viva support",
+  },
+  /**
    * Semantic asset slots for backward compatibility
    */
   innerPages: {
