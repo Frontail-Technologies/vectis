@@ -122,6 +122,23 @@ export const ASSETS = {
     deliveryAlt: "Complete handover, setup guide and viva support",
   },
   /**
+   * Why Vectis Illustrations — Stored in public/illustrations/why-vectis/
+   */
+  whyVectis: {
+    workingImplementation: "/illustrations/why-vectis/01-working-implementation.png",
+    workingImplementationAlt: "Working Implementation with tested code, circuits and simulation toolchains",
+    completeDocumentation: "/illustrations/why-vectis/02-complete-documentation.png",
+    completeDocumentationAlt: "Complete Documentation with chapter-wise reports and IEEE formatted manuscripts",
+    researchAdvisory: "/illustrations/why-vectis/03-research-advisory.png",
+    researchAdvisoryAlt: "Research Advisory with methodology formulation and journal draft support",
+    simulationTesting: "/illustrations/why-vectis/04-simulation-testing.png",
+    simulationTestingAlt: "Simulation and Testing with accurate numerical results",
+    vivaPreparation: "/illustrations/why-vectis/05-viva-preparation.png",
+    vivaPreparationAlt: "Viva Preparation with presentation decks and technical walkthroughs",
+    structuredHandover: "/illustrations/why-vectis/06-structured-handover.png",
+    structuredHandoverAlt: "Structured Handover with milestone progress and full source code handover",
+  },
+  /**
    * Semantic asset slots for backward compatibility
    */
   innerPages: {

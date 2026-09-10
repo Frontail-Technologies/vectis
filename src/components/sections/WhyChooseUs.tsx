@@ -1,72 +1,50 @@
 import React from "react";
-import { CheckCircle2, FileText, BookOpen, FlaskConical, Presentation, Package } from "lucide-react";
+import Image from "next/image";
+import { whyChooseUsPillars } from "@/data/whyChooseUs";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-
-// Small placeholder metric — isolated here for easy replacement
-const metric = { value: "500+", label: "Projects Delivered" };
-
-const benefits = [
-  {
-    icon: CheckCircle2,
-    title: "Working Implementation",
-    sub: "Fully verified code, circuits, and simulation toolchains.",
-  },
-  {
-    icon: FileText,
-    title: "Complete Documentation",
-    sub: "Chapter-wise reports, block schematics, and formatted manuscripts.",
-  },
-  {
-    icon: BookOpen,
-    title: "Research Advisory",
-    sub: "Methodology formulation, benchmarking, and journal draft support.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Simulation & Testing",
-    sub: "MATLAB, ANSYS, Proteus, Vivado — accurate numerical results.",
-  },
-  {
-    icon: Presentation,
-    title: "Viva Preparation",
-    sub: "Slide decks, expected viva questions, and technical walkthroughs.",
-  },
-  {
-    icon: Package,
-    title: "Structured Handover",
-    sub: "Milestone-based progress with full source files and setup guides.",
-  },
-];
 
 export function WhyChooseUs() {
   return (
     <section className="py-16 sm:py-24 bg-surface-warm border-b border-border">
       <Container>
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
-          <SectionHeading
-            eyebrow="Why Vectis"
-            title="Built for Serious Academic Work"
-            description="Rigorous execution, reproducible results, and complete guidance from start to submission."
-          />
-          {/* Lone metric integrated here */}
-          <div className="shrink-0 text-right">
-            <p className="font-heading text-4xl font-semibold text-primary">{metric.value}</p>
-            <p className="text-sm text-muted-foreground mt-1">{metric.label}</p>
-          </div>
-        </div>
+        <SectionHeading
+          eyebrow="Why Vectis"
+          title="Built for Serious Academic Work"
+          description="Reliable implementation, research guidance, testing and complete project support."
+          centered
+          className="mb-12 sm:mb-16"
+        />
 
-        {/* 6 benefits — icon + title + one line */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
-          {benefits.map(({ icon: Icon, title, sub }) => (
-            <div key={title} className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center shrink-0 mt-0.5">
-                <Icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+        {/* 6 Clean Visual Cards — 3 columns × 2 rows */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyChooseUsPillars.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="group flex flex-col items-center text-center p-6 sm:p-7 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-xs transition-all duration-200"
+            >
+              {/* Prominent Illustration on Top */}
+              <div className="w-full flex items-center justify-center mb-4 min-h-28 sm:min-h-32">
+                <Image
+                  src={pillar.illustration}
+                  alt={pillar.illustrationAlt}
+                  width={180}
+                  height={140}
+                  style={{ width: "auto", height: "auto" }}
+                  className="max-h-28 sm:max-h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 180px, (max-width: 1024px) 200px, 180px"
+                />
               </div>
-              <div>
-                <h3 className="font-heading text-base font-semibold text-foreground mb-1">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{sub}</p>
-              </div>
+
+              {/* Card Title */}
+              <h3 className="font-heading text-base sm:text-lg font-semibold text-card-foreground mb-2">
+                {pillar.title}
+              </h3>
+
+              {/* Short Supporting Line */}
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-xs">
+                {pillar.description}
+              </p>
             </div>
           ))}
         </div>
@@ -74,3 +52,4 @@ export function WhyChooseUs() {
     </section>
   );
 }
+

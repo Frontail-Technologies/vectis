@@ -1,38 +1,48 @@
+import { ASSETS } from "@/data/assets";
+
 export interface ValuePillar {
-  number: string;
   title: string;
   description: string;
+  illustration: string;
+  illustrationAlt: string;
 }
 
 export const whyChooseUsPillars: ValuePillar[] = [
   {
-    number: "01",
     title: "Working Implementation",
-    description: "Every hardware circuit, MATLAB script, and AI model is built from scratch and fully verified with live test execution.",
+    description: "Fully verified code, circuits, and simulation toolchains.",
+    illustration: ASSETS.whyVectis.workingImplementation,
+    illustrationAlt: ASSETS.whyVectis.workingImplementationAlt,
   },
   {
-    number: "02",
-    title: "Technical Documentation",
-    description: "Complete chapter-wise reports, circuit schematics, algorithm flowcharts, and IEEE format manuscripts tailored to university guidelines.",
+    title: "Complete Documentation",
+    description: "Chapter-wise reports, block schematics, and formatted manuscripts.",
+    illustration: ASSETS.whyVectis.completeDocumentation,
+    illustrationAlt: ASSETS.whyVectis.completeDocumentationAlt,
   },
   {
-    number: "03",
-    title: "Research Guidance",
-    description: "Rigorous mathematical formulations, baseline benchmarking against existing literature, and Scopus/SCI journal draft assistance.",
+    title: "Research Advisory",
+    description: "Methodology formulation, benchmarking, and journal draft support.",
+    illustration: ASSETS.whyVectis.researchAdvisory,
+    illustrationAlt: ASSETS.whyVectis.researchAdvisoryAlt,
   },
   {
-    number: "04",
-    title: "1-on-1 Project Mentoring",
-    description: "Direct line with postgraduate engineers to understand the architecture, code execution flow, and theoretical foundations.",
+    title: "Simulation & Testing",
+    description: "MATLAB, ANSYS, Proteus, Vivado — accurate numerical results.",
+    illustration: ASSETS.whyVectis.simulationTesting,
+    illustrationAlt: ASSETS.whyVectis.simulationTestingAlt,
   },
   {
-    number: "05",
-    title: "Simulation & Analysis",
-    description: "High-accuracy numerical simulations across MATLAB Simulink, ANSYS FEA/CFD, Proteus, Vivado, and COMSOL Multiphysics.",
+    title: "Viva Preparation",
+    description: "Slide decks, expected viva questions, and technical walkthroughs.",
+    illustration: ASSETS.whyVectis.vivaPreparation,
+    illustrationAlt: ASSETS.whyVectis.vivaPreparationAlt,
   },
   {
-    number: "06",
-    title: "Defense & Viva Voce Prep",
-    description: "Comprehensive slide decks, expected examiner viva questions, and step-by-step presentation scripts for final review.",
+    title: "Structured Handover",
+    description: "Milestone-based progress with full source files and setup guides.",
+    illustration: ASSETS.whyVectis.structuredHandover,
+    illustrationAlt: ASSETS.whyVectis.structuredHandoverAlt,
   },
 ];
+
