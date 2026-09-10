@@ -9,21 +9,22 @@ export function Testimonials() {
     <section className="py-16 sm:py-24 bg-surface border-b border-border">
       <Container>
         <SectionHeading
-          eyebrow="Student Feedback"
-          title="What Researchers Say"
-          align="center"
-          className="mb-10 sm:mb-12"
+          eyebrow="Scholar Feedback"
+          title="Trusted by Scholars & Final Year Engineers"
+          description="Real project reviews from master's students, doctoral researchers, and faculty."
+          centered
+          className="mb-12 sm:mb-14"
         />
 
-        {/* 3 testimonials — compact, scannable */}
+        {/* 3 testimonials — clean, minimal */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="p-6 rounded-2xl border border-border bg-background hover:border-primary/30 transition-colors duration-200"
+              className="p-6 sm:p-7 rounded-2xl border border-border bg-card hover:border-primary/30 transition-colors duration-200 flex flex-col justify-between"
             >
               {/* Quote */}
-              <p className="text-sm sm:text-base text-foreground/85 leading-relaxed italic mb-6">
+              <p className="text-xs sm:text-sm text-card-foreground/90 leading-relaxed italic mb-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
@@ -39,8 +40,8 @@ export function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground">{t.name}</h4>
-                  <p className="text-xs text-muted-foreground">
+                  <h4 className="text-xs sm:text-sm font-semibold text-card-foreground">{t.name}</h4>
+                  <p className="text-[11px] font-mono text-muted-foreground">
                     {t.degree} · {t.discipline}
                   </p>
                 </div>
@@ -52,3 +53,4 @@ export function Testimonials() {
     </section>
   );
 }
+

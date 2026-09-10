@@ -7,6 +7,7 @@ interface SectionHeadingProps {
   highlightPhrase?: string;
   description?: string;
   align?: "left" | "center";
+  centered?: boolean;
   theme?: "light" | "dark";
   className?: string;
   children?: React.ReactNode;
@@ -17,12 +18,14 @@ export function SectionHeading({
   title,
   highlightPhrase,
   description,
-  align = "left",
+  align,
+  centered,
   theme = "light",
   className,
   children,
 }: SectionHeadingProps) {
   const isDark = theme === "dark";
+  const resolvedAlign = centered ? "center" : (align || "left");
 
   let titleContent: React.ReactNode = title;
   if (highlightPhrase && title.includes(highlightPhrase)) {
@@ -42,8 +45,8 @@ export function SectionHeading({
     <div
       className={cn(
         "flex flex-col gap-3 max-w-2xl",
-        align === "center" && "mx-auto text-center items-center",
-        align === "left" && "text-left items-start",
+        resolvedAlign === "center" && "mx-auto text-center items-center",
+        resolvedAlign === "left" && "text-left items-start",
         className
       )}
     >

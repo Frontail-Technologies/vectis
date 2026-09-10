@@ -2,38 +2,46 @@ export interface ProcessStep {
   step: string;
   title: string;
   description: string;
-  deliverable: string;
+  deliverable?: string;
 }
 
-export const processSteps: ProcessStep[] = [
+export const projectJourneySteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Share Your Requirement",
-    description: "Submit your base IEEE paper, project synopsis, hardware spec, or thesis abstract for review.",
-    deliverable: "Immediate Review",
+    title: "Requirement",
+    description: "Scope review, problem definition & base paper verification.",
   },
   {
     step: "02",
-    title: "Scope & Technical Plan",
-    description: "We verify feasibility, simulation toolchain requirements, milestones, and deliver a detailed technical roadmap.",
-    deliverable: "Milestone Proposal",
+    title: "Planning",
+    description: "Methodology formulation, tool selection & timeline mapping.",
   },
   {
     step: "03",
-    title: "Development & Research",
-    description: "Our lab team implements the architecture, reproduces baseline papers, and trains models or builds hardware circuits.",
-    deliverable: "Modular Codebase",
+    title: "Development",
+    description: "Core algorithm, simulation model & hardware implementation.",
   },
   {
     step: "04",
-    title: "Testing & Documentation",
-    description: "We execute benchmark runs, verify waveform/accuracy plots, and generate chapter-wise academic documentation.",
-    deliverable: "Complete Report",
+    title: "Testing",
+    description: "Benchmark validation, error analysis & accuracy checks.",
   },
   {
     step: "05",
-    title: "Review & Live Delivery",
-    description: "Receive full source code, simulation models, reports, and a 1-on-1 walkthrough session for defense preparation.",
-    deliverable: "Live Mentoring & Viva Prep",
+    title: "Documentation",
+    description: "Chapter drafting, architecture diagrams & result plots.",
+  },
+  {
+    step: "06",
+    title: "Review",
+    description: "Code walkthrough, mentor feedback & revisions.",
+  },
+  {
+    step: "07",
+    title: "Delivery",
+    description: "Complete source handover, setup guide & viva support.",
   },
 ];
+
+export const processSteps: ProcessStep[] = projectJourneySteps;
+

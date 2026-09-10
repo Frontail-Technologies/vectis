@@ -5,23 +5,23 @@ import { Container } from "@/components/ui/Container";
 const supporters = [
   {
     icon: GraduationCap,
-    title: "Engineering Students",
-    sub: "B.Tech & M.Tech",
+    title: "B.Tech Final Year",
+    sub: "Capstone & Hardware Projects",
   },
   {
     icon: FlaskConical,
-    title: "Postgraduate Researchers",
-    sub: "M.E. & M.S. Scholars",
+    title: "M.Tech Scholars",
+    sub: "IEEE Paper Implementation",
   },
   {
     icon: BookOpen,
-    title: "Thesis Scholars",
-    sub: "Ph.D. & Dissertation",
+    title: "Ph.D. Candidates",
+    sub: "Dissertation & Methodology",
   },
   {
     icon: Microscope,
-    title: "Research Professionals",
-    sub: "Academic & Industry",
+    title: "Faculty & Researchers",
+    sub: "Journal Publication & Analysis",
   },
 ];
 

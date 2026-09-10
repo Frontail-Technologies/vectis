@@ -10,32 +10,32 @@ const benefits = [
   {
     icon: CheckCircle2,
     title: "Working Implementation",
-    sub: "Fully tested code, circuits, and simulations — nothing broken.",
+    sub: "Fully verified code, circuits, and simulation toolchains.",
   },
   {
     icon: FileText,
     title: "Complete Documentation",
-    sub: "Chapter-wise reports, schematics, and IEEE-format manuscripts.",
+    sub: "Chapter-wise reports, block schematics, and formatted manuscripts.",
   },
   {
     icon: BookOpen,
-    title: "Research Guidance",
-    sub: "Methodology, benchmarking, and Scopus journal draft support.",
+    title: "Research Advisory",
+    sub: "Methodology formulation, benchmarking, and journal draft support.",
   },
   {
     icon: FlaskConical,
     title: "Simulation & Testing",
-    sub: "MATLAB, ANSYS, Proteus, Vivado — high-accuracy results.",
+    sub: "MATLAB, ANSYS, Proteus, Vivado — accurate numerical results.",
   },
   {
     icon: Presentation,
     title: "Viva Preparation",
-    sub: "Slide decks, expected questions, and presentation walkthroughs.",
+    sub: "Slide decks, expected viva questions, and technical walkthroughs.",
   },
   {
     icon: Package,
-    title: "Structured Delivery",
-    sub: "Milestone-based progress with full handover documentation.",
+    title: "Structured Handover",
+    sub: "Milestone-based progress with full source files and setup guides.",
   },
 ];
 

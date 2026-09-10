@@ -1,45 +1,43 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ASSETS } from "@/data/assets";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/button";
 
 const primaryServices = [
   {
-    id: "software-ai",
-    label: "Software & AI",
-    heading: "Software & AI Systems",
-    sub: "Deep learning, computer vision, NLP, and full-stack engineering.",
-    illustration: ASSETS.illustrations.softwareAi,
-    alt: ASSETS.illustrations.softwareAiAlt,
+    id: "engineering-projects",
+    slug: "engineering-projects",
+    label: "Engineering Projects",
+    title: "Engineering & Software Systems",
+    description: "Custom hardware circuits, embedded systems, full-stack software, and AI/ML model implementations.",
+    highlights: ["Working Hardware & Code", "Benchmark Validation"],
+    illustration: ASSETS.phase2.engineeringProjects,
+    alt: ASSETS.phase2.engineeringProjectsAlt,
   },
   {
-    id: "research",
-    label: "Research & Thesis",
-    heading: "Research & Thesis",
-    sub: "Ph.D. thesis support, dissertation guidance, and journal publication.",
-    illustration: ASSETS.illustrations.researchThesis,
-    alt: ASSETS.illustrations.researchThesisAlt,
+    id: "research-thesis",
+    slug: "research-thesis",
+    label: "Research Consulting",
+    title: "Research & Thesis Consulting",
+    description: "Methodology formulation, literature matrix structuring, and chapter-wise dissertation guidance.",
+    highlights: ["Methodology Structuring", "Chapter-Wise Drafting"],
+    illustration: ASSETS.phase2.researchThesis,
+    alt: ASSETS.phase2.researchThesisAlt,
   },
   {
-    id: "simulation",
-    label: "Simulation & Analysis",
-    heading: "Simulation & Analysis",
-    sub: "MATLAB, Simulink, ANSYS FEA/CFD, Proteus, and Vivado.",
-    illustration: ASSETS.illustrations.simulationAnalysis,
-    alt: ASSETS.illustrations.simulationAnalysisAlt,
+    id: "simulation-analysis",
+    slug: "simulation-analysis",
+    label: "Technical Analysis",
+    title: "Simulation & Numerical Analysis",
+    description: "Multi-physics finite element analysis, computational fluid dynamics, and power system grid modeling.",
+    highlights: ["MATLAB / Simulink", "ANSYS FEA & CFD"],
+    illustration: ASSETS.phase2.simulationAnalysis,
+    alt: ASSETS.phase2.simulationAnalysisAlt,
   },
-];
-
-const secondaryServices = [
-  "Engineering Projects",
-  "Embedded Systems",
-  "Electrical & Power",
-  "Mechanical / FEA",
-  "IEEE Projects",
-  "Technical Documentation",
 ];
 
 export function CoreServices() {
@@ -47,69 +45,73 @@ export function CoreServices() {
     <section id="services" className="py-16 sm:py-24 bg-surface-soft border-b border-border">
       <Container>
         <SectionHeading
-          eyebrow="Our Services"
-          title="What We Build for You"
-          description="End-to-end project support — from concept to final submission."
-          className="mb-10 sm:mb-14"
+          eyebrow="Core Specializations"
+          title="Engineering & Research Support That Moves Your Work Forward"
+          description="Structured technical assistance tailored for academic rigor and engineering excellence."
+          centered
+          className="mb-12 sm:mb-16"
         />
 
-        {/* 3 primary service cards — illustration dominant */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+        {/* 3 Clean Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {primaryServices.map((svc) => (
             <div
               key={svc.id}
-              className="group bg-background rounded-2xl border border-border overflow-hidden hover:border-primary/40 hover:shadow-md transition-all duration-300 flex flex-col"
+              className="group flex flex-col justify-between rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/40 hover:shadow-md transition-all duration-300"
             >
-              {/* Illustration — 60% of card height, object-contain, generous padding */}
-              <div className="relative w-full bg-background flex items-center justify-center px-6 pt-8 pb-4"
-                style={{ minHeight: "220px" }}>
-                <Image
-                  src={svc.illustration}
-                  alt={svc.alt}
-                  width={320}
-                  height={220}
-                  style={{ width: "auto", height: "auto" }}
-                  className="w-auto h-auto max-h-55 object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-width: 640px) 90vw, 33vw"
-                />
+              <div>
+                {/* Illustration Area */}
+                <div className="w-full bg-surface-warm/50 flex items-center justify-center p-6 border-b border-border min-h-45">
+                  <Image
+                    src={svc.illustration}
+                    alt={svc.alt}
+                    width={280}
+                    height={180}
+                    style={{ width: "auto", height: "auto" }}
+                    className="max-h-40 object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-primary block mb-2">
+                    {svc.label}
+                  </span>
+                  <h3 className="font-heading text-lg sm:text-xl font-semibold text-card-foreground group-hover:text-primary transition-colors mb-2.5">
+                    {svc.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5">
+                    {svc.description}
+                  </p>
+
+                  {/* 2 Small Highlights */}
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {svc.highlights.map((h) => (
+                      <span
+                        key={h}
+                        className="px-2.5 py-1 rounded-md bg-secondary text-[11px] font-mono text-secondary-foreground"
+                      >
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              {/* Content — tight, minimal */}
-              <div className="px-5 pb-6 pt-2 flex flex-col flex-1">
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-primary block mb-1.5">
-                  {svc.label}
-                </span>
-                <h3 className="font-heading text-base font-semibold text-foreground mb-1.5 group-hover:text-primary transition-colors">
-                  {svc.heading}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                  {svc.sub}
-                </p>
-                <Link
-                  href="#consultation"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-4 hover:underline underline-offset-2"
-                >
-                  Learn more <ArrowUpRight className="w-3 h-3" />
-                </Link>
+              {/* Action Button */}
+              <div className="px-6 pb-6 pt-0">
+                <Button asChild variant="outline" size="sm" className="w-full justify-between">
+                  <Link href={`/services/${svc.slug}`}>
+                    <span>Explore Service</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </Link>
+                </Button>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Secondary: simple link pills */}
-        <div className="flex flex-wrap gap-2.5">
-          {secondaryServices.map((svc) => (
-            <Link
-              key={svc}
-              href="#consultation"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-border bg-background hover:border-primary/50 hover:text-primary text-sm font-medium text-muted-foreground transition-colors duration-200"
-            >
-              {svc}
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
           ))}
         </div>
       </Container>
     </section>
   );
 }
+
