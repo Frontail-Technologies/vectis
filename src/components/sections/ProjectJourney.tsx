@@ -23,15 +23,15 @@ export function ProjectJourney() {
               key={item.step}
               className="group flex flex-col items-center text-center p-4 sm:p-5 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-xs transition-all duration-200"
             >
-              {/* Large Prominent Illustration */}
-              <div className="w-full flex items-center justify-center mb-3.5 min-h-28 sm:min-h-32">
+              {/* Large Prominent Illustration with Light Background */}
+              <div className="w-full flex items-center justify-center p-3 rounded-xl bg-surface-soft/70 border border-border/50 mb-3.5 min-h-28 sm:min-h-32">
                 <Image
                   src={item.illustration}
                   alt={item.illustrationAlt}
                   width={200}
                   height={160}
                   style={{ width: "auto", height: "auto" }}
-                  className="max-h-28 sm:max-h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="max-h-24 sm:max-h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 180px, (max-width: 1280px) 200px, 160px"
                 />
               </div>
