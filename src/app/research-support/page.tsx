@@ -23,7 +23,7 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 
 export const metadata: Metadata = {
   title: "Academic Research Support & Thesis Consulting | Vectis Studio",
-  description: "End-to-end research guidance from topic selection and literature review to mathematical methodology, analysis, and Scopus/SCI publication.",
+  description: "End-to-end research guidance from topic selection and literature review to mathematical methodology, analysis, and Scopus/SCI publication guidance.",
 };
 
 const whoWeSupport = [
