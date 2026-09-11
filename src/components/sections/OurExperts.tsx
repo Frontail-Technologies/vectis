@@ -6,14 +6,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function OurExperts() {
   return (
-    <section className="py-16 sm:py-24 bg-surface-warm border-b border-border">
+    <section className="py-14 sm:py-18 bg-background border-b border-border">
       <Container>
         <SectionHeading
           eyebrow="Advisory Team"
           title="Meet Our Research & Engineering Experts"
           description="Experienced domain specialists guiding you through technical implementation and defense."
           centered
-          className="mb-12 sm:mb-16"
+          className="mb-10 sm:mb-12"
         />
 
         {/* 3 clean expert profiles */}

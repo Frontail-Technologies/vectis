@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-surface-brand py-20 sm:py-28 lg:py-36 border-b border-surface-brand-border">
+    <section className="relative overflow-hidden bg-surface-brand py-14 sm:py-20 lg:py-24 border-b border-surface-brand-border">
       {/* Full-width background image weighted to the right */}
       <div className="absolute inset-0 select-none">
         <Image

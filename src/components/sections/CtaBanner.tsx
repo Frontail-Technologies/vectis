@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function CtaBanner() {
   return (
-    <section id="consultation" className="py-14 sm:py-20 bg-background">
+    <section id="consultation" className="py-12 sm:py-16 bg-background">
       <Container>
         {/* Bold Colored Banner — Clean, high contrast block */}
         <div className="relative rounded-2xl bg-primary p-8 sm:p-12 lg:p-14 text-center overflow-hidden border border-primary shadow-md">

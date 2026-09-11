@@ -22,7 +22,7 @@ const trustItems = [
 
 export function TrustConfidentiality() {
   return (
-    <section className="py-14 sm:py-18 bg-surface-soft border-b border-border">
+    <section className="py-14 sm:py-18 bg-background border-b border-border">
       <Container>
         <div className="text-center mb-10 sm:mb-12">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary block mb-2">

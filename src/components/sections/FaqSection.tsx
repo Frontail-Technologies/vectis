@@ -10,7 +10,7 @@ import {
 
 export function FaqSection() {
   return (
-    <section className="py-16 sm:py-24 bg-muted border-b border-border">
+    <section className="py-14 sm:py-18 bg-background border-b border-border">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left: compact heading only (4 cols) */}

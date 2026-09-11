@@ -6,14 +6,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Testimonials() {
   return (
-    <section className="py-16 sm:py-24 bg-surface border-b border-border">
+    <section className="py-14 sm:py-18 bg-surface-soft border-b border-border">
       <Container>
         <SectionHeading
           eyebrow="Scholar Feedback"
           title="Trusted by Scholars & Final Year Engineers"
           description="Real project reviews from master's students, doctoral researchers, and faculty."
           centered
-          className="mb-12 sm:mb-14"
+          className="mb-10 sm:mb-12"
         />
 
         {/* 3 testimonials — clean, minimal */}

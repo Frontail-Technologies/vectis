@@ -17,25 +17,25 @@ const researchChecklist = [
 
 export function ResearchSupport() {
   return (
-    <section className="py-16 sm:py-24 bg-background border-b border-border overflow-hidden">
+    <section className="py-14 sm:py-18 bg-background border-b border-border overflow-hidden">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left Column: Content + Checklist */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: 50% Content + Checklist */}
           <div className="lg:col-span-6 flex flex-col items-start">
-            <span className="text-xs font-semibold tracking-widest uppercase text-primary block mb-3">
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary block mb-2.5">
               Academic Advisory
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-[38px] font-semibold text-foreground tracking-tight mb-4 leading-[1.15]">
-              Built for Researchers & Scholars at Every Milestone
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-[36px] font-semibold text-foreground tracking-tight mb-3.5 leading-[1.15]">
+              Built for Researchers &amp; Scholars at Every Milestone
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-lg leading-relaxed">
               Step-by-step technical mentorship structured to satisfy institutional academic standards and peer-reviewed rigor.
             </p>
 
             {/* Clean 6-Item Checklist */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-9 w-full">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-7 w-full">
               {researchChecklist.map((item) => (
-                <li key={item} className="flex items-start gap-2.5">
+                <li key={item} className="flex items-start gap-2.5 p-2 rounded-lg bg-surface-soft/60 border border-border/60">
                   <div className="w-5 h-5 rounded-md bg-secondary flex items-center justify-center text-primary shrink-0 mt-0.5 border border-border">
                     <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
                   </div>
@@ -46,8 +46,8 @@ export function ResearchSupport() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap items-center gap-3.5">
-              <Button asChild size="default" className="h-11 px-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <Button asChild size="default" className="h-11 px-6 font-semibold">
                 <Link href="/research-support">
                   <span>Explore Research Support</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -61,17 +61,18 @@ export function ResearchSupport() {
             </div>
           </div>
 
-          {/* Right Column: Clean Visual */}
+          {/* Right Column: 50% Large Visual */}
           <div className="lg:col-span-6 flex items-center justify-center">
-            <div className="w-full max-w-130 rounded-2xl border border-border bg-surface-soft p-6 sm:p-8 flex items-center justify-center">
+            <div className="w-full rounded-2xl border border-border bg-surface-soft p-4 sm:p-6 flex items-center justify-center">
               <Image
                 src={ASSETS.phase2.researchSupportVisual}
                 alt={ASSETS.phase2.researchSupportVisualAlt}
-                width={520}
-                height={400}
-                style={{ width: "auto", height: "auto" }}
-                className="max-h-[320px] object-contain"
-                sizes="(max-width: 1024px) 90vw, 50vw"
+                width={560}
+                height={420}
+                style={{ width: "100%", height: "auto" }}
+                className="max-h-90 sm:max-h-100 object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </div>
           </div>
@@ -80,4 +81,5 @@ export function ResearchSupport() {
     </section>
   );
 }
+
 
